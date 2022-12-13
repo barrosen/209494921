@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../static/All_css.css">
+    <script defer src="../static/javascript/NavBar.js"></script>
+    <script defer src="../static/javascript/Contact.js"></script>
+    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<header>
+    <img src="../static/Pics/logo.png" class=logo alt="The Logo">
+    <nav>
+        <ul>
+            <li><a href="../views/About.html">About</a></li>
+            <li><a href="../views/Contact.html">Contact</a></li>
+            <li><a href="../views/Rate.html">Rate</a></li>
+        </ul>
+    </nav>
+    <a href="../views/SignIn.html"><img src="../static/Pics/home.png" class=home alt="Home"></a>
+</header>
+
+<body>
+<div class="container_c">
+    <form method="post" action="../views/SignIn.html" class="form7">
+
+        <label for="c_name">Full Name</label>
+        <br>
+        <input type="text" id="c_name" name="full name" placeholder="Your name.." required>
+        <br>
+        <label for="c_mail">Email</label>
+        <br>
+        <input type="email" id="c_mail" name="mail" placeholder="Your email.." required>
+        <br>
+        <label for="country">Country</label>
+        <select id="country" name="country">
+            <option value="Israel">Israel</option>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+
+        <label for="subject">Message</label>
+        <textarea id="subject" name="subject" placeholder="Write your message here.." ></textarea>
+
+        <input type="submit" class="btn" value="Submit">
+        <div class="msg"></div>
+    </form>
+</div>
+</body>
+
+</html>

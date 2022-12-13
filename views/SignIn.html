@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="../static/All_css.css">
+    <script defer src="../static/javascript/SignIn.js"></script>
+    <script defer src="../static/javascript/Objects.js"></script>
+</head>
+<header><img src="../static/Pics/logo.png" class=logo alt="The Logo"></header>
+<body>
+<div class = "headers">
+    <h1> Sneaker Locker </h1>
+    <br>
+    <h2> Find Your Sneaker </h2>
+</div>
+<div class = flex_container>
+    <div class ="item">
+        <form class="fillForm" id="form1" class="block">
+            <h2> Login Here</h2>
+            <br>
+            <div class="msg"></div>
+            <label> Username </label>
+            <input type="email" id="email" name="Username" placeholder="Enter Email Here">
+            <br> <br>
+            <label> Password </label>
+            <input type="password" id="pass" name="Password" placeholder="Enter Password Here">
+            <br> <br>
+            <input type="submit" value="Sign In" class="btn">
+        </form>
+    </div>
+
+    <div class = "item">
+        <img src="../static/Pics/shoes.png" class=shoes alt="Shoes">
+        <br>
+        <label> New? </label>
+        <br>
+        <a href="../views/SignUp.html"> <input type="submit" value="Sign Up" class="btn"> </a>
+    </div>
+</div>
+
+
+
+<footer>
+    <div class="flex_footer">
+        <div class = "pic" > <a href="../views/Contact.html"> <input type="submit" value="Contact" class="btn"> </a> </div>
+        <div class = "pic" > <img src="../static/Pics/mail.png" id="mail">
+        </div>
+        <div class = "pic">
+            <a href="../views/About.html"> <input type="submit" value="About" class="btn"> </a>
+        </div>
+        <div class = "pic">
+            <img src="../static/Pics/about.png" id="about">
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
