@@ -74,10 +74,3 @@ function EmailValidation(mail) {
     return false;
 }
 
-function PasswordValidation(password) {
-    if ((/^[a-zA-Z]$/) && (/^[a-zA-Z0-9]$/) && (/^[a-zA-Z0-9]*$/)) //regex to check if valid password
-    {
-        return true;
-    }
-    return false;
-}
