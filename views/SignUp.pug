@@ -1,0 +1,34 @@
+extends mainLayout
+block header
+  a(href='/SignIn')
+    img.home(src='Pics/home.png' alt='Home')
+block content
+  h1 Sneaker Locker
+  form#form2.fillForm(action='/signUpSuccess' method='post')
+    .msg
+    h2  Sign Up Here
+    br
+    label  Username
+    input#email(type='email' name='UsernameSU' placeholder='Enter Email Here' required='')
+    br
+    br
+    label  Password
+    input#pass(type='password' name='PasswordSU' placeholder='Enter Password Here' required='')
+    br
+    br
+    label  First Name
+    input#first(type='text' name='First' placeholder='Enter First Name Here' required='')
+    br
+    br
+    label  Last Name
+    input#last(type='text' name='Last' placeholder='Enter Last Name Here' required='')
+    br
+    br
+    label  Age
+    input#Age(type='number' name='Age' min='0' max='120' oninput="validity.valid||(value='');" placeholder='Enter Age Here' required='')
+    br
+    br
+    input.btn(type='submit' value='Sign Up')
+    #add
+      img.addPic(src='Pics/add.png' alt='add button')
+  img.ball(src='Pics/basketball.png')

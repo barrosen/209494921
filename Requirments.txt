@@ -1,0 +1,72 @@
+Install Syntax: 
+npm install mysql2 express pug csvtojson cookie-parser path body-parser --save
+
+Run Server Syntax: 
+node index.js
+
+To start paste this in your browser: 
+http://localhost:3000/createDB
+
+**You don't need to paste all links, just follow the instructions in the browser.
+
+If the tables already exist for some reason, paste this in your browser to drop all tables:
+http://localhost:3000/DropTable
+
+To Create Tables:
+http://localhost:3000/CreateTable
+
+To Insert Data:
+http://localhost:3000/InsertData
+
+To Show Tables:
+http://localhost:3000/ShowTable
+
+Create Tables Syntax:
+
+Create Table IF NOT EXISTS `customers` (
+    email varchar(255) Not Null,
+    password varchar(255) Not Null,
+    first varchar(255) not null,
+    last varchar(255) not null,
+    age varchar(255) not null
+    ) Engine=InnoDB DEFAULT CHARSET=utf8;
+
+Create Table if NOT EXISTS `products`(
+    productID varchar(255) NOT NULL,
+    name varchar(255) Not NULL,
+    Type varchar(255) Not Null,
+    Brand varchar(255) Not NULL,
+    Year varchar(255) NOT NULL,
+    Value varchar(255) NOT NULL,
+    Info varchar(255) NOT NULL,
+    Link varchar(255) NOT NULL
+    ) Engine=InnoDB DEFAULT CHARSET=utf8;
+
+Create Table If Not Exists `ratings`(
+    ratingID varchar(255) NOT NULL,
+    ratingScore varchar(255) NOT NULL,
+    date varchar(255) NOT NULL,
+    email varchar(255) NOT NULL
+    ) Engine=InnoDB DEFAULT CHARSET=utf8;
+
+
+Create Table IF NOT EXISTS `messages`(
+    messageID varchar(255) NOT NULL,
+    fullName varchar(255) NOT NULL,
+    mail varchar(255) NOT NULL,
+    country varchar(255) NOT NULL,
+    message varchar(255) NOT NULL,
+    date varchar(255) NOT NULL
+    ) Engine=InnoDB DEFAULT CHARSET=utf8;
+
+Create TABLE `searches`(
+    searchID varchar(255) NOT NULL,
+    searchTime varchar(255) NOT NULL,
+    brand varchar(255) NOT NULL,
+    max varchar(255) NOT NULL,
+    email varchar(255) NOT NULL
+    ) Engine=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+

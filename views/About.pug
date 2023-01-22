@@ -1,0 +1,69 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title About
+  link(rel='stylesheet' href='All_css.css')
+  script(defer='' src='javascript/NavBar.js')
+  script(defer='' src='javascript/About.js')
+#box_about
+  header
+    img.logo(src='Pics/logo.png' alt='The Logo')
+    nav
+      ul(class=loggedIn ? 'logged-in' : '')
+        li
+          a(href='/About') About
+        li
+          a(href='/Contact') Contact
+        li
+          a(href='/Rate') Rate
+        li
+          a(href='/Search') Search
+        li
+          a(href='/Recommend') Recommend
+    label#mail_label #{user}
+    a(href='/SignIn')
+      img.home(src='Pics/home.png' alt='Home')
+  .about-section
+    h1 About Us
+    br
+    br
+    p We make it easy for you to find your dream shoe with our simple search engine
+    p We give you multiple options of shops to buy from with just a click of a button
+  .msg
+  form#form7
+    .Team
+      h2#h2About Our Team
+      .row
+        .column
+          .card
+            img.teamPic(src='Pics/coworking1.jpg' alt='Tommy')
+            .container_a
+              h2 Tommy Jil
+              p.title CEO &amp; Founder
+              p
+                | Has experience of over 20 years in the shoes industry. Has founded 3 companies in this field.
+              p tommy@sneakerlocker.com
+              p
+                input#btn1.btn(type='submit' value='Contact')
+        .column
+          .card
+            img.teamPic(src='Pics/coworking2.jpg' alt='Susan')
+            .container_a
+              h2 Susan Ann
+              p.title Head of Marketing
+              p
+                | Has experience in marketing at the top shoe brands in the world. Recently joined our team.
+              p susan@sneakerlocker.com
+              p
+                input#btn2.btn(type='submit' value='Contact')
+        .column
+          .card
+            img.teamPic(src='Pics/coworking3.jpg' alt='Jimmy')
+            .container_a
+              h2 Jimmy Vega
+              p.title Head of R&amp;D
+              p
+                | Started as a junior developer and climbed his way up to this job. Now managing over 30 people in the R&amp;D department.
+              p jimmy@sneakerlocker.com
+              p
+                input#btn3.btn(type='submit' value='Contact')

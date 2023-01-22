@@ -1,0 +1,51 @@
+extends mainLayout
+
+block header
+  nav
+    ul
+      li
+        a(href='/About') About
+      li
+        a(href='/Contact') Contact
+      li
+        a(href='/Rate') Rate
+      li
+        a(href='/Search') Search
+      li
+        a(href='/Recommend') Recommend
+
+  label#mail_label #{user}
+  a(href='/SignIn')
+    img.home(src='Pics/home.png' alt='Home')
+
+block content
+  h1 Sneaker Locker
+  a(href='/Recommend')
+    h2#rec Click Here to see Recommendations
+  form#form3.fillForm(action='/SearchResults' method='get')
+    .msg
+    h2  Search For Sneaker
+    label  Shoe Type:
+    label  High
+    input#typeHigh(type='checkbox' name='High' value='value1')
+    label Low
+    input#typeLow(type='checkbox' name='Low' value='value2')
+    br
+    label  Brand
+    select#brands(name='brands')
+      option(value='nike') Nike
+      option(value='adidas') Adidas
+      option(value='jordans') Jordans
+      option(value='newbalance') New Balance
+    br
+    label  From (Year)
+    select#from(type='submit' name='FromYear' required='')
+    br
+    label  Until (Year)
+    select#until(name='UntilYear' required='')
+    br
+    label  Max Value
+    input#Max(type='number' min='0' max='10000' oninput="validity.valid||(value='');" name='MaxValue' placeholder='Enter Maximum Price' required='')
+    br
+    input.btn(type='submit' value='Search')
+  img.ball(src='Pics/basketball.png')

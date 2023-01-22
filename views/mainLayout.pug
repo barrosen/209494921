@@ -1,0 +1,26 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title
+  link(rel='stylesheet' href='All_css.css')
+  script(defer='' src='javascript/Rate.js')
+  script(defer='' src='javascript/SignUp.js')
+  script(defer='' src='javascript/NavBar.js')
+  script(defer='' src='javascript/Search.js')
+header
+  img.logo(src='Pics/logo.png' alt='The Logo')
+  block header
+body
+  block content
+footer
+  .flex_footer
+    .pic
+      a(href='/Contact')
+        input.btn(type='submit' value='Contact')
+    .pic
+      img#mail(src='Pics/mail.png')
+    .pic
+      a(href='/About')
+        input.btn(type='submit' value='About')
+    .pic
+      img#about(src='Pics/about.png')

@@ -1,0 +1,41 @@
+extends mainLayout
+
+block header
+  nav
+    ul(class=loggedIn ? 'logged-in' : '')
+      li
+        a(href='/About') About
+      li
+        a(href='/Contact') Contact
+      li
+        a(href='/Rate') Rate
+      li
+        a(href='/Search') Search
+      li
+        a(href='/Recommend') Recommend
+
+  label#mail_label #{user}
+  a(href='/SignIn')
+    img.home(src='Pics/home.png' alt='Home')
+
+block content
+  .container_c
+    form.form7(method='post' action='/Contacted')
+      label(for='c_name') Full Name
+      br
+      input#c_name(type='text' name='fullname' placeholder='Your name..' required='')
+      br
+      label(for='c_mail') Email
+      br
+      input#c_mail(type='email' name='mail' placeholder='Your email..' required='')
+      br
+      label(for='country') Country
+      select#country(name='country')
+        option(value='Israel') Israel
+        option(value='australia') Australia
+        option(value='canada') Canada
+        option(value='usa') USA
+      label(for='subject') Message
+      textarea#subject(name='subject' placeholder='Write your message here..')
+      input.btn(type='submit' value='Submit')
+      .msg

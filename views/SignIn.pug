@@ -1,0 +1,29 @@
+extends mainLayout
+block content
+  .headers
+    h1 #{v1}
+    br
+    h2  Find Your Sneaker
+  .flex_container
+    .item
+      form#form1.fillForm(action='/signInSuccess' method='get')
+        h2  Login Here
+        br
+        .msg
+        label  Username
+        input#email(type='email' name='UsernameSI' placeholder='Enter Email Here' required='')
+        br
+        br
+        label  Password
+        input#pass(type='password' name='PassSI' placeholder='Enter Password Here' required='')
+        br
+        br
+        input.btn(type='submit' value='Sign In')
+    .item
+      img.shoes(src='Pics/shoes.png' alt='Shoes')
+      br
+      label  New?
+      br
+      a(href='/SignUp')
+        input.btn(type='submit' value='Sign Up')
+

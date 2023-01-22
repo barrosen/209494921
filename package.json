@@ -1,0 +1,28 @@
+{
+  "name": "209494921",
+  "version": "1.0.0",
+  "description": "\"# 209494921\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barrosen/209494921.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barrosen/209494921/issues"
+  },
+  "homepage": "https://github.com/barrosen/209494921#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cookie-parser": "^1.4.6",
+    "csvtojson": "^2.0.10",
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "pug": "^3.0.2"
+  }
+}

@@ -1,0 +1,92 @@
+extends secondLayout
+block content
+    br
+    a(href='/SignIn')
+        h1 Click Here to Start
+    br
+    br
+    h2 #{title1}
+    table
+        tr
+            th Email
+            th Password
+            th First
+            th Last
+            th Age
+        each c in customers
+            tr
+            td= c.email
+            td= c.password
+            td= c.first
+            td= c.last
+            td= c.age
+    br
+    h2 #{title2}
+    table
+        tr
+            th ProductID
+            th Name
+            th Type
+            th Brand
+            th Year
+            th Price
+            th Info
+            th Link
+        each p in products
+            tr
+            td= p.productID
+            td= p.name
+            td= p.Type
+            td= p.Brand
+            td= p.Year
+            td= p.Value
+            td= p.Info
+            td= p.Link
+    br
+    h2 #{title3}
+        table
+            tr
+                th RatingID
+                th RatingScore
+                th Date
+                th User
+            each r in ratings
+                tr
+                td= r.ratingID
+                td= r.ratingScore
+                td= r.date
+                td= r.email
+    br
+    h2 #{title4}
+        table
+            tr
+                th MessageID
+                th FullName
+                th Mail
+                th Country
+                th Message
+                th Date
+            each m in messages
+                tr
+                td= m.messageID
+                td= m.fullName
+                td= m.mail
+                td= m.country
+                td= m.message
+                td= m.date
+    br
+    h2 #{title5}
+        table
+            tr
+                th SearchID
+                th SearchTime
+                th Brand
+                th Max
+                th Email
+            each s in searches
+                tr
+                td= s.searchID
+                td= s.searchTime
+                td= s.brand
+                td= s.max
+                td= s.email

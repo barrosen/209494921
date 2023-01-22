@@ -7,5 +7,6 @@ function btnSub(e) {
        e.preventDefault();
        msg.classList.add('valid');
        msg.innerHTML = 'Thanks For Contacting Me';
-       setTimeout(() => window.location.href = '../views/SignIn.html', 2000);
+       setTimeout(() => window.location.href = '/About', 2000);
 }
+

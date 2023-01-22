@@ -1,0 +1,35 @@
+extends mainLayout
+
+block header
+  nav
+    ul
+      li
+        a(href='/About') About
+      li
+        a(href='/Contact') Contact
+      li
+        a(href='/Rate') Rate
+      li
+        a(href='/Search') Search
+      li
+        a(href='/Recommend') Recommend
+
+  label#mail_label #{user}
+  a(href='/SignIn')
+    img.home(src='Pics/home.png' alt='Home')
+block content
+  br
+  h1 Star Rating
+  form#form6.fillForm(action='/ratedSuccess' method='post')
+    .star_rating
+      p  How was your experience?
+      button.star(name="rating" value="1") &star;
+      button.star(name="rating" value="2") &star;
+      button.star(name="rating" value="3") &star;
+      button.star(name="rating" value="4") &star;
+      button.star(name="rating" value="5") &star;
+      p.current_rating 0 of 5
+      .msg
+      br
+      br
+      p Current Rating is: #{rate}

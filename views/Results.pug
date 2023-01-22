@@ -1,0 +1,43 @@
+extends secondLayout
+
+block header
+  nav
+    ul(class=log ? 'log' : '')
+      li
+        a(href='/About') About
+      li
+        a(href='/Contact') Contact
+      li
+        a(href='/Rate') Rate
+      li
+        a(href='/Search') Search
+      li
+        a(href='/Recommend') Recommend
+      li
+        a(href='/SearchResults') Results
+  label#mail_label #{user}
+  a(href='/SignIn')
+    img.home(src='Pics/home.png' alt='Home')
+
+block content
+  h1#result_h1  #{v1}
+  br
+  br
+  table
+    tr
+      th Name
+      th Type
+      th Brand
+      th Year
+      th Price
+      th Info
+      th Link
+    each p in products
+      tr
+      td= p.name
+      td= p.Type
+      td= p.Brand
+      td= p.Year
+      td= p.Value
+      td= p.Info
+      td= p.Link
