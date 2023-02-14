@@ -383,8 +383,7 @@ function checkIfCustomerExists(email, callback) {
 function saveSearch(search, callback) {
     connection.query(
         'INSERT INTO searches (searchID, searchTime, brand, max, email) VALUES (?, ?, ?, ?, ?)',
-        [search.searchID, search.searchTime, search.brand, search.max, search.email],
-        console.log("search saved")
+        [search.searchID, search.searchTime, search.brand, search.max, search.email]
     );
 }
 
@@ -394,7 +393,6 @@ function countSearch(current_user) {
     let Q = 'SELECT Count(*) FROM searches WHERE email = ?'
     connection.query(Q, [current_user], (err, results) => {
         if (results[0]['Count(*)'] > 2) {
-            console.log("search counted");
             minSearchTime(current_user);
         }
         return
@@ -411,7 +409,6 @@ function minSearchTime(current_user) {
 function deleteSearch(current_user,time) {
     let Q = 'Delete FROM searches WHERE email = ? AND searchTime = ?'
     connection.query(Q, [current_user,time], (err, results) => {
-        console.log("search deleted");
         return
     });
 }

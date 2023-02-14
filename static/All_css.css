@@ -28,6 +28,7 @@ header {
     display: flex;
     align-items: center;
     border-bottom: 5px solid #f98109;
+    z-index: 1;
 }
 
 li{
@@ -185,17 +186,17 @@ h1{
 }
 
 ul.logged-in li:nth-child(3){
-  display: none;
+    display: none;
 }
 ul.logged-in li:nth-child(4){
-  display: none;
+    display: none;
 }
 ul.logged-in li:nth-child(5){
-  display: none;
+    display: none;
 }
 
 ul.log li:nth-child(6){
-  display: none;
+    display: none;
 }
 
 #rec{
@@ -221,6 +222,9 @@ ul.log li:nth-child(6){
 @media (max-width: 650px) {
     .logo {
         width: 10vh;
+    }
+     ul li:nth-child(5){
+        display: none;
     }
 }
 
